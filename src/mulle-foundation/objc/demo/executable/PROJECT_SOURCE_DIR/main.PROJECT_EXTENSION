@@ -1,0 +1,29 @@
+#import "import-private.h"
+
+#include <stdio.h>
+
+
+@interface Hello : NSObject
+
++ (void) print;
+
+@end
+
+
+@implementation Hello
+
++ (void) print
+{
+   NSLog( @"VfL Bochum %d\n", <|PROJECT_UPCASE_IDENTIFIER|>_VERSION);
+}
+
+@end
+
+
+int  main( int argc, char *argv[])
+{
+   [Hello print];
+
+   return( 0);
+}
+
