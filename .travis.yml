@@ -31,7 +31,7 @@ script:
   - ls src/
   - "MULLE_SDE_EXTENSION_PATH=\"${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde\" mulle-sde init -d exe -m mulle-foundation/objc-developer executable"
   - "cd exe"
-  - "mulle-sde -v craft
+  - "mulle-sde -v craft"
   - cat "/Users/travis/build/MulleFoundation/mulle-foundation-developer/lib/build/.buildorder/Release/MulleObjC/CMakeFiles/CMakeTmp/testCCompiler.c"
   - mulle-clang -v '-###' -c "/Users/travis/build/MulleFoundation/mulle-foundation-developer/lib/build/.buildorder/Release/MulleObjC/CMakeFiles/CMakeTmp/testCCompiler.c"
   - "cd .."
