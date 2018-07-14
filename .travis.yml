@@ -37,7 +37,7 @@ script:
   - echo "#else" >> /tmp/x.c
   - echo "int main(int argc, char* argv[])" >> /tmp/x.c
   - echo "#endif" >> /tmp/x.c
-  - echo "{ (void)argv; return argc-1;}") >> /tmp/x.c
+  - echo "{ (void)argv; return argc-1;}" >> /tmp/x.c
   - mulle-clang -v -### -c "/tmp/x.c"
 
 #  - "MULLE_SDE_EXTENSION_PATH=\"${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde\" mulle-sde init -d exe -m mulle-foundation/objc-developer executable"
