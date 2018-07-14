@@ -27,15 +27,24 @@ matrix:
 
 
 script:
-  - ls /usr/share/mulle-sde/extensions
-  - ls src/
-  - "MULLE_SDE_EXTENSION_PATH=\"${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde\" mulle-sde init -d exe -m mulle-foundation/objc-developer executable"
-  - "cd exe"
-  - "mulle-sde -v craft"
-  - cat "/Users/travis/build/MulleFoundation/mulle-foundation-developer/lib/build/.buildorder/Release/MulleObjC/CMakeFiles/CMakeTmp/testCCompiler.c"
-  - mulle-clang -v '-###' -c "/Users/travis/build/MulleFoundation/mulle-foundation-developer/lib/build/.buildorder/Release/MulleObjC/CMakeFiles/CMakeTmp/testCCompiler.c"
-  - "cd .."
-  - "MULLE_SDE_EXTENSION_PATH=\"${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde\" mulle-sde init -d lib -m mulle-foundation/objc-developer library"
-  - "cd lib"
-  - "mulle-sde -v craft"
-  - "cd .."
+  - echo "#ifdef __cplusplus\n" > /tmp/x.c
+  - echo "# error \"The CMAKE_C_COMPILER is set to a C++ compiler\"" >> /tmp/x.c
+  - echo "#endif" >> /tmp/x.c
+  - echo "#if defined(__CLASSIC_C__)" >> /tmp/x.c
+  - echo "int main(argc, argv)" >> /tmp/x.c
+  - echo "  int argc;" >> /tmp/x.c
+  - echo "  char* argv[];" >> /tmp/x.c
+  - echo "#else" >> /tmp/x.c
+  - echo "int main(int argc, char* argv[])" >> /tmp/x.c
+  - echo "#endif" >> /tmp/x.c
+  - echo "{ (void)argv; return argc-1;}") >> /tmp/x.c
+  - mulle-clang -v -### -c "/tmp/x.c"
+
+#  - "MULLE_SDE_EXTENSION_PATH=\"${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde\" mulle-sde init -d exe -m mulle-foundation/objc-developer executable"
+#  - "cd exe"
+#  - "mulle-sde -v craft"
+#  - "cd .."
+#  - "MULLE_SDE_EXTENSION_PATH=\"${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde\" mulle-sde init -d lib -m mulle-foundation/objc-developer library"
+#  - "cd lib"
+#  - "mulle-sde -v craft"
+#  - "cd .."
