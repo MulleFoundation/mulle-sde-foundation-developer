@@ -14,7 +14,7 @@
 
 + (void) print
 {
-   NSLog( @"VfL Bochum %d\n", <|PROJECT_UPCASE_IDENTIFIER|>_VERSION);
+   NSLog( @"VfL Bochum %d", <|PROJECT_UPCASE_IDENTIFIER|>_VERSION);
 }
 
 @end

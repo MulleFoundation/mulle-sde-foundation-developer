@@ -2,7 +2,7 @@
 
 This is a collection of [mulle-sde](//github.com/mulle-sde/mulle-sde)
 *extensions* to support development of [MulleFoundation](//github.com/MulleFoundation)
-code. As a package *mulle-foundation-developer* is also a convenient way to
+code. As a package **mulle-foundation-developer** is also a convenient way to
 install mulle-sde and [mulle-clang](//github.com/Codeon-GmbH/mulle-clang).
 
 > See the [mulle-sde Wiki](https://github.com/mulle-sde/mulle-sde/wiki) for
@@ -27,6 +27,9 @@ ubuntu  | same as debian
 
 #### Debian Mulle kybernetiK and Codeon repositories
 
+For apt installation you need to add the Mulle kybernetiK and Codeon
+debian repositories first:
+
 ```
 wget -O - https://www.codeon.de/dists/codeon-pub.asc | sudo apt-key add -
 echo "deb [arch=amd64] http://download.codeon.de `lsb_release -c -s` main" | sudo tee /etc/apt/sources.list.d/codeon.de-main.list > /dev/null
@@ -44,7 +47,7 @@ This is suitable for environments without supported package managers:
 ```
 curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
 chmod 755 installer-all && \
-sudo OTHER_PROJECTS="mulle-foundation/mulle-foundation-developer;latest
+sudo OTHER_PROJECTS="MulleFoundation/mulle-foundation-developer;latest
 mulle-objc/mulle-objc-developer;latest
 mulle-c/mulle-c-developer;latest
 mulle-sde/mulle-sde-developer;latest" ./installer-all /usr
@@ -54,13 +57,14 @@ You need to install [mulle-clang](//github.com/Codeon-GmbH/mulle-clang) yourself
 
 ### Docker
 
-There is a [Dockerfile](https://raw.githubusercontent.com/mulle-foundation/mulle-foundation-developer/release/Dockerfile) in the project.
+There is a [Dockerfile](https://raw.githubusercontent.com/MulleFoundation/mulle-foundation-developer/release/Dockerfile) in the project.
 
-This will build and run an ephemeral container named `mulle-foundation`:
+This will build and run an ephemeral container named `mulle-foundation` on
+ubuntu:
 
 ```
-docker build -t mulle-foundation 'https://raw.githubusercontent.com/mulle-foundation/mulle-foundation-developer/release/Dockerfile'
-docker run -i -t --rm mulle-foundation
+sudo docker build -t mulle-foundation 'https://raw.githubusercontent.com/MulleFoundation/mulle-foundation-developer/release/Dockerfile'
+sudo docker run -i -t --rm mulle-foundation
 ```
 
 
