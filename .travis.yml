@@ -28,15 +28,12 @@ matrix:
 
 
 script:
-  - "ls /usr/local/share/mulle-sde/extensions/mulle-sde/cmake/project/executable/"
-  - "MULLE_SDE_EXTENSION_BASE_PATH=\"${PWD}/src\" mulle-sde -vvv -lx -ld init -d exe -m mulle-foundation/objc-developer executable"
+  - "MULLE_SDE_EXTENSION_BASE_PATH=\"${PWD}/src\" mulle-sde init -d exe -m mulle-foundation/objc-developer executable"
   - "cd exe"
-#  - "MULLE_CRAFT_MAIN_PROJECT_MAKE_FLAGS=\"-vvv -ld\" mulle-sde -v craft"
-  - "ls -l"
-  - "ls /usr/local/share/mulle-sde/extensions/mulle-sde/cmake/project/executable/"
-#  - "cd .."
-#  - "MULLE_SDE_EXTENSION_BASE_PATH=\"${PWD}/src\" mulle-sde init -d lib -m mulle-foundation/objc-developer library"
-#  - "cd lib"
-#  - "mulle-sde -v craft"
-#  - "cd .."
+  - "MULLE_CRAFT_MAIN_PROJECT_MAKE_FLAGS=\"-vvv -ld\" mulle-sde craft"
+  - "cd .."
+  - "MULLE_SDE_EXTENSION_BASE_PATH=\"${PWD}/src\" mulle-sde init -d lib -m mulle-foundation/objc-developer library"
+  - "cd lib"
+  - "mulle-sde craft"
+  - "cd .."
 
