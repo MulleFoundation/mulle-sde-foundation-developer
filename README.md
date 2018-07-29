@@ -39,21 +39,38 @@ sudo apt-get update
 ```
 
 
+
 ### Script
 
-mulle-sde provides an [installer-all](https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all) script to install the required commands and mulle-foundation-developer itself into `/usr` or some other place.
+mulle-sde provides an [installer-all](https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all) script to install the required commands and mulle-foundation-developer into `/usr` or some other place.
+
+You need to install [mulle-clang](//github.com/Codeon-GmbH/mulle-clang) yourself.
+
 This is suitable for environments without supported package managers:
+
+#### Install into /usr with sudo
 
 ```
 curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
 chmod 755 installer-all && \
-sudo OTHER_PROJECTS="MulleFoundation/mulle-foundation-developer;latest
-mulle-objc/mulle-objc-developer;latest
-mulle-c/mulle-c-developer;latest
-mulle-sde/mulle-sde-developer;latest" ./installer-all /usr
+sudo OTHER_PROJECTS="MulleFoundation/foundation-developer;latest \
+MulleFoundation/mulle-foundation-developer;latest \
+mulle-objc/mulle-objc-developer;latest \
+mulle-c/mulle-c-developer;latest" \
+SDE_PROJECTS="mulle-sde-developer;latest" ./installer-all /usr
 ```
 
-You need to install [mulle-clang](//github.com/Codeon-GmbH/mulle-clang) yourself.
+#### Install into ${HOME} (without sudo)
+
+```
+curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
+chmod 755 installer-all && \
+OTHER_PROJECTS="MulleFoundation/foundation-developer;latest \
+MulleFoundation/mulle-foundation-developer;latest \
+mulle-objc/mulle-objc-developer;latest \
+mulle-c/mulle-c-developer;latest" \
+SDE_PROJECTS="mulle-sde-developer;latest" ./installer-all ~
+```
 
 ### Docker
 
