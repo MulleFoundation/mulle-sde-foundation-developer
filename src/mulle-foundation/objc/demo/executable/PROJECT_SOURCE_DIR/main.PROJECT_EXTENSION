@@ -5,16 +5,18 @@
 
 @interface Hello : NSObject
 
-+ (void) print;
++ (void) printName:(NSString *) name
+           version:(unsigned int) version;
 
 @end
 
 
 @implementation Hello
 
-+ (void) print
++ (void) printName:(NSString *) name
+           version:(unsigned int) version;
 {
-   NSLog( @"VfL Bochum %d", <|PROJECT_UPCASE_IDENTIFIER|>_VERSION);
+   NSLog( @"%@ %u", name, version);
 }
 
 @end
@@ -22,7 +24,8 @@
 
 int  main( int argc, char *argv[])
 {
-   [Hello print];
+   [Hello printName:@"VfL Bochum"
+            version:<|PROJECT_UPCASE_IDENTIFIER|>_VERSION];
 
    return( 0);
 }
