@@ -42,7 +42,7 @@ sudo apt-get update
 
 ### Script
 
-mulle-sde provides an [installer-all](https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all) script to install the required commands and mulle-foundation-developer into `/usr` or some other place.
+mulle-sde provides an [installer-all](https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/bin/installer-all) script to install the required commands and mulle-foundation-developer into `/usr` or some other place.
 
 You need to install [mulle-clang](//github.com/Codeon-GmbH/mulle-clang) yourself.
 
@@ -51,7 +51,7 @@ This is suitable for environments without supported package managers:
 #### Install into /usr with sudo
 
 ```
-curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
+curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/bin/installer-all' && \
 chmod 755 installer-all && \
 sudo OTHER_PROJECTS="MulleFoundation/foundation-developer;latest \
 MulleFoundation/mulle-foundation-developer;latest \
@@ -63,7 +63,7 @@ SDE_PROJECTS="mulle-sde-developer;latest" ./installer-all /usr
 #### Install into ${HOME} (without sudo)
 
 ```
-curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
+curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/bin/installer-all' && \
 chmod 755 installer-all && \
 OTHER_PROJECTS="MulleFoundation/foundation-developer;latest \
 MulleFoundation/mulle-foundation-developer;latest \
@@ -107,4 +107,10 @@ mulle-sde init -m mulle-foundation/objc-developer executable
 mulle-sde init -m mulle-foundation/objc-developer -d foolib library
 ```
 
+### Don't create a project but get ObjC libraries built
+
+```
+mulle-sde init -m mulle-foundation/objc-developer none
+mulle-sde craft
+```
 

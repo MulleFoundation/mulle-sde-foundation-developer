@@ -1,3 +1,8 @@
+## 0.14.0
+
+* Various small improvements
+
+
 ### 0.13.1
 
 * update `folder_exclude_patterns`
