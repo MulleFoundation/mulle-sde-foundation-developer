@@ -7,6 +7,7 @@
 VERSIONFILE="CMakeLists.txt"
 VERSIONNAME="PROJECT_VERSION"
 VERSIONFILEMIRRORS="\
-src/mulle-foundation/objc-cmake/version
 src/mulle-foundation/objc/version
+src/mulle-foundation/objc-cmake/version
+src/mulle-foundation/objc-demo/version
 src/mulle-foundation/objc-developer/version"
