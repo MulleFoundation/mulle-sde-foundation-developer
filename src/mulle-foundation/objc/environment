@@ -1,1 +1,6 @@
+#
+# These are used by mulle-match find to speed up the search.
+#
+MULLE_MATCH_FILENAMES+="*.plist"
+
 PREFERRED_STARTUP_LIBRARY="MulleFoundation-startup"
