@@ -1,4 +1,5 @@
 #
---nodetype 'tar' --tag '${MULLE_FOUNDATION_TAG:-latest}' --url '${MULLE_FOUNDATION_URL:-https://github.com/MulleFoundation/MulleFoundation/archive/${MULLE_TAG}.tar.gz}' 'MulleFoundation'
+--nodetype '${MULLE_FOUNDATION_NODETYPE:-tar}' --marks no-singlephase --branch '${MULLE_FOUNDATION_BRANCH}' --tag '${MULLE_FOUNDATION_TAG:-latest}' --url '${MULLE_FOUNDATION_URL:-https://github.com/MulleFoundation/MulleFoundation/archive/${MULLE_TAG}.tar.gz}' 'MulleFoundation'
 #
---nodetype 'tar' --marks no-dynamic-link,no-intermediate-link,no-header --tag '${MULLE_FOUNDATION_STARTUP_TAG:-latest}' --url '${MULLE_FOUNDATION_STARTUP_URL:-https://github.com/MulleFoundation/MulleFoundation-startup/archive/${MULLE_TAG}.tar.gz}' 'MulleFoundation-startup'
+#
+--nodetype '${MULLE_FOUNDATION_STARTUP_NODETYPE:-tar}' --marks no-dynamic-link,no-header,no-intermediate-link --branch '${MULLE_FOUNDATION_STARTUP_BRANCH}' --tag '${MULLE_FOUNDATION_STARTUP_TAG:-latest}' --url '${MULLE_FOUNDATION_STARTUP_URL:-https://github.com/MulleFoundation/MulleFoundation-startup/archive/${MULLE_TAG}.tar.gz}' 'MulleFoundation-startup'
