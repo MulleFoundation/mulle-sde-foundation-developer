@@ -1,3 +1,7 @@
+### 0.17.1
+
+* add mulle-foundation/travis for orthogonality
+
 ## 0.17.0
 
 * Various small improvements
