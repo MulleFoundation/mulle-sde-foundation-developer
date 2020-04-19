@@ -14,6 +14,24 @@ Extension                       | Type | Description
 mulle-foundation/objc-developer | meta | Create Objective-C projects
 
 
+## Usage
+
+
+### Create an Objective-C executable project
+
+```
+mkdir foo
+cd foo
+mulle-sde init -m mulle-foundation/objc-developer executable
+```
+
+### Create an Objective-C library project
+
+```
+mulle-sde init -m mulle-foundation/objc-developer -d foolib library
+```
+
+
 ## Install
 
 ### Packages
@@ -84,33 +102,4 @@ sudo docker build -t mulle-foundation 'https://raw.githubusercontent.com/MulleFo
 sudo docker run -i -t --rm mulle-foundation
 ```
 
-
-# Usage
-
-#### Check that the (meta) extensions are found:
-
-```
-mulle-sde extension list
-```
-
-### Create an Objective-C executable project
-
-```
-mkdir foo
-cd foo
-mulle-sde init -m mulle-foundation/objc-developer executable
-```
-
-### Create an Objective-C library project
-
-```
-mulle-sde init -m mulle-foundation/objc-developer -d foolib library
-```
-
-### Don't create a project but get ObjC libraries built
-
-```
-mulle-sde init -m mulle-foundation/objc-developer none
-mulle-sde craft
-```
 
