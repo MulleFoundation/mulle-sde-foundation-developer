@@ -2,4 +2,4 @@
 --nodetype '${MULLE_FOUNDATION_NODETYPE:-tar}' --marks no-singlephase --branch '${MULLE_FOUNDATION_BRANCH}' --tag '${MULLE_FOUNDATION_TAG:-latest}' --url '${MULLE_FOUNDATION_URL:-https://github.com/MulleFoundation/MulleFoundation/archive/${MULLE_TAG}.tar.gz}' 'MulleFoundation'
 #
 #
---nodetype '${MULLE_FOUNDATION_STARTUP_NODETYPE:-tar}' --marks no-dynamic-link,no-intermediate-link,no-header,no-cmakedependency,no-cmakeloader --branch '${MULLE_FOUNDATION_STARTUP_BRANCH}' --tag '${MULLE_FOUNDATION_STARTUP_TAG:-latest}' --url '${MULLE_FOUNDATION_STARTUP_URL:-https://github.com/MulleFoundation/MulleFoundation-startup/archive/${MULLE_TAG}.tar.gz}' 'MulleFoundation-startup'
+--nodetype '${MULLE_FOUNDATION_STARTUP_NODETYPE:-tar}' --marks no-dynamic-link,no-intermediate-link,no-header,no-cmake-dependency,no-cmake-loader,no-cmake-searchpath --branch '${MULLE_FOUNDATION_STARTUP_BRANCH}' --tag '${MULLE_FOUNDATION_STARTUP_TAG:-latest}' --url '${MULLE_FOUNDATION_STARTUP_URL:-https://github.com/MulleFoundation/MulleFoundation-startup/archive/${MULLE_TAG}.tar.gz}' 'MulleFoundation-startup'
