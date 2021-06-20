@@ -2,5 +2,19 @@
 # These are used by mulle-match find to speed up the search.
 #
 MULLE_MATCH_FILENAMES+="*.plist"
+MULLE_MATCH_FILENAMES+="*.strings"
+MULLE_MATCH_FILENAMES+="*.eomodeld"
+MULLE_MATCH_FILENAMES+="*.nib"
+MULLE_MATCH_FILENAMES+="*.xib"
+
+MULLE_MATCH_FILENAMES+="*.jpg"
+MULLE_MATCH_FILENAMES+="*.png"
+MULLE_MATCH_FILENAMES+="*.tiff"
+MULLE_MATCH_FILENAMES+="*.tif"
+MULLE_MATCH_FILENAMES+="*.svg"
+MULLE_MATCH_FILENAMES+="*.icns"
+
+MULLE_MATCH_FILENAMES+="*.snd"
+MULLE_MATCH_FILENAMES+="*.wav"
 
 PREFERRED_STARTUP_LIBRARY="MulleFoundation-startup"

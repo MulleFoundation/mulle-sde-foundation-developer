@@ -1,3 +1,4 @@
 # do not inherit sourcetree settings from mulle-objc
 
-no-sourcetree
+no-sourcetree;no-project-oneshot
+
