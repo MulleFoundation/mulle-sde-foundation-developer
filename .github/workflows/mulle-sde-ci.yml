@@ -30,7 +30,7 @@ jobs:
       run:  env | sort
 
     - uses: actions/checkout@v2
-      if: ${{ env.ACT }} != "true"
+      if: ${{ ! env.ACT }}
 
     - uses: mulle-sde/github-ci@v1
       if: ${{ ! env.ACT }}
